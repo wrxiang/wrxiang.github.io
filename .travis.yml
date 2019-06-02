@@ -22,7 +22,7 @@ after_script:
 
 branches: 
 only: 
-- hexo 
+- resource 
 env: 
 global: 
 - GH_REF: github.com/wrxiang/wrxiang.github.io.git 
