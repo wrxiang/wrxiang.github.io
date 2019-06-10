@@ -30,7 +30,7 @@ after_script:
 #  - cd ./public
 #  - git init
   - git config user.name "wrxiang"
-  - git config user.email "wrxiang@163.com"
+  - git config user.email "rxhome@163.com"
 #  - git add .
 #  - git commit -m "Update docs"
 #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
