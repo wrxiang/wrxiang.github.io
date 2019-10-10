@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Nerver
+title: Never
 subtitle: 认真的人才有资格开玩笑
 description: 荣耀不是炫耀
 keywords:
@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://wrxiang.github.io
+url: http://wrxiang.gitee.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
