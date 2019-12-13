@@ -33,7 +33,9 @@ PowerDesigner使用反向工程功能连接Oracle数据库自动生成模型以�
 上述设置完成后就可以连接成功了，然后点击确定回到数据库连接界面，选择配置好的Oracle数据连接，输入用户名以及密码，点击<span id="inline-blue">connect</span>连接数据库
 ![1576217565.png](https://i.loli.net/2019/12/13/IgEOzxSPKpq5aji.png)
 ![1576217565.png](https://i.loli.net/2019/12/13/ue2jsLR7pqYmJrf.png)
-然后在弹出的数据库反向引擎界面选择需要的用户、表或者视图等，点击确定会自动生成模型。默认生成的模型CODE和NAME都是表字段，没有将数据库字段的注释自动生成出来，需要进行以下操作：
+然后在弹出的数据库反向引擎界面选择需要的用户、表或者视图等，点击确定会自动生成模型。
+![1576217565.png](https://i.loli.net/2019/12/13/9yp6OvIna3KMkeN.png)
+默认生成的模型CODE和NAME都是表字段，没有将数据库字段的注释自动生成出来，需要进行以下操作：
 点击 <span id="inline-blue">工具</span>--> <span id="inline-blue">Execute Commonds</span> --> <span id="inline-blue">Edit/Run Script...</span>，然后将以下内容输入弹出的窗口中，然后点击Run按钮就会将数据库注释添加到模型的Name上。
 ```
 Option   Explicit 
