@@ -5,7 +5,8 @@ categories: 持续集成
 tags: [jenkins, ssh]
 ---
 ## 情景描述
-公司的Jenkins服务安装在linux系统上，但是很多应用服务器都是windows系统，那么在jenkisn上编译生成的war包如何传输到windows服务器上并且进行tomcat服务的重启呢？
+公司的Jenkins服务安装在linux系统上，但是很多应用服务器都是windows系统，那么在jenkisn上编译生成的war包如何传输到windows服务器上并且进行tomcat服务的重启呢？相对于linux的应用服务器，使用jenkins在windows上做自动发布还是遇到了一些不好解决的问题，windows系统在运维上还是有许多不便的（默默吐槽一句）。
+<!--more-->
 ## 发布步骤
 类比linux的应用服务器，首选是通过ssh远程登录的方式进行，这样的话jenkins的配置都不需要怎么更改，简单的发布步骤如下：
 1. jenkins中使用MAVEN编译打包，生成所需的war包
@@ -17,7 +18,7 @@ windows默认是不支持ssh服务的，这里我采用的是微软官方的解�
 
 ## 遇到的问题
 jenkisn远程调用应用服务器上的部署脚本后，tomcat服务没有启动，但是在应用服务器上手动运行脚本是能够完成项目的部署以及重启的，通过调试发现远程调用bat脚本确实将tomcat服务停掉并进行了重启，但是随着ssh连接的断开，通过ssh启动的进程也一同销毁。
-通过搜索问题发现，在ssh到windows的情况下，只要ssh退出，ssh启动的任务都会被kill掉。
+通过搜索问题发现，在ssh到windows的情况下，只要ssh退出，ssh启动的任务都会被kill掉。万事具备，只欠重启，这步实现不了，那之前的工作和没有做一样，没办法，只能找各种方案进行尝试。
 
 ## 尝试过的方案
 ### 防止jenkins杀掉进程
