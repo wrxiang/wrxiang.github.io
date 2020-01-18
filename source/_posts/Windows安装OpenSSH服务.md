@@ -52,3 +52,12 @@ cmd中重启sshd服务就可以使用密钥登录SSH服务
 net stop sshd
 net start sshd
 ```
+## 踩入的坑
+1. 网上很多教程介绍需要在 `C:\Users\账户名\.ssh`目录创建 `authorized_keys`公钥文件，后来发现7.9版本之后，公钥文件默认路径是 `C:\ProgramData\ssh\administrators_authorized_keys`并且需要设置权限，设置权限命令上文已有说明
+2. Windows Service2012R2即使配置了公钥，连接时依然显示没有注册公钥，官方判断可能是权限问题 [Fix SSH file permissions](https://github.com/PowerShell/Win32-OpenSSH/wiki/OpenSSH-utility-scripts-to-fix-file-permissions)，解决方法：进入安装目录，右键 FixHostFilePermissions.ps1【使用PowerShell运行】，命令行提示全选是，重启sshd服务后密钥连接正常
+3. 配置密钥登录后仍需要输入密码，SSH默认不希望home目录和~/.ssh目录对组有写权限，修改配置文件中`StrictModes no`，不让 sshd 去检查用户家目录或相关档案的权限数据，这里我们粗暴的设置为不检查权限就好，或者设置客户端的权限，若客户端是linux可参考以下命令
+```
+chmod g-w /home/wjw 
+chmod 700 /home/wjw/.ssh
+chmod 600 /home/wjw/.ssh/authorized_keys
+```
