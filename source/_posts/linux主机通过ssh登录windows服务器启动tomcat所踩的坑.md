@@ -22,7 +22,7 @@ jenkisn远程调用应用服务器上的部署脚本后，tomcat服务没有启�
 
 ## 尝试过的方案
 ### 防止jenkins杀掉进程
-执行脚本前增加 `exportBUILD_ID=notkillme`，告诉jenkins任务结束后不要杀掉通过它启动的进程。jenkins和tomcat在同一台服务器上可以实现，但这是ssh断开的服务和jenkins无关。
+执行脚本前增加 `export BUILD_ID=notkillme`，告诉jenkins任务结束后不要杀掉通过它启动的进程。jenkins和tomcat在同一台服务器上可以实现，但这是ssh断开的服务和jenkins无关。
 ### shell脚本
 在windows 上安装linux的shell环境，我是通过安装一个git，然后将git的cmd和bin配置到环境变量path中来实现的。
 shell中可以使用nohup命令启动tomcat，nohup 命令会忽略所有挂断（SIGHUP）信号。在注销后使用 nohup 命令运行的程序不会注销，仍会运行。
