@@ -6,7 +6,7 @@ tags: [OpenSSH, Windows]
 ---
 最近在做Jenkins的持续集成，公司的应用服务器大多是Windows系统，平时的运维主要是靠远程桌面的方式，为了使用Jenkins自动部署，需要在windows系统上安装SSH的服务，这里介绍微软官方的解决方案，详细介绍可以参考官网wiki。
 基于PowerShell的OpenSSH: [https://github.com/PowerShell/Win32-OpenSSH/releases](https://github.com/PowerShell/Win32-OpenSSH/releases) 
-
+<!--more-->
 ## 安装步骤
 1. 进入链接下载最新的OpenSSH-Win64.zip，解压至 `C:\Program Files\OpenSSH`
 2. 打开cmd，进入 `C:\Program Files\OpenSSH`安装目录，执行以下命令
