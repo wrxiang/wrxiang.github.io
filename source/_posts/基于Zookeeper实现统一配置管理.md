@@ -146,21 +146,6 @@ public class ZkGetConfigClient {
         });
         return config;
     }
-
-    public static void main(String[] args) throws Exception {
-        ZkGetConfigClient client = new ZkGetConfigClient();
-        client.getConfig();
-        System.out.println(client.config.toString());
-        for(int i = 0;i<10;i++){
-            System.out.println(client.config.toString());
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-        }
-    }
 }
 ```
 测试，启动配置管理中心
