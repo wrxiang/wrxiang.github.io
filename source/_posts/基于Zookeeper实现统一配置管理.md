@@ -1,7 +1,7 @@
 ---
 title: 基于Zookeeper实现统一配置管理
 date: 2020-02-19 22:56:12
-categories: Java
+categories: java
 tags: [zookeeper, 配置管理]
 ---
 ## 为什么需要统一配置？

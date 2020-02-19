@@ -1,7 +1,7 @@
 ---
 title: Zookeeper可以做什么？
 date: 2020-02-19 18:39:34
-categories: zookeeper
+categories: java
 tags: [zookeeper, 应用详解]
 ---
 &emsp;&emsp;Zookeeper是一个分布式服务框架，是Apache Hadoop的一个子项目，它主要用于解决分布式应用中经常遇到的一些数据管理问题，比如配置管理、命名服务、分布式锁、集群管理等。
