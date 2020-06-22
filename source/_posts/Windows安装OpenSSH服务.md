@@ -20,6 +20,8 @@ net start sshd
 ```
 4. 修复主机端的文件权限,进入 `C:\Program Files\OpenSSH`，右键 FixHostFilePermissions.ps1【使用PowerShell运行】，命令行提示全选是
 
+执行这一步时有可能命令窗口一闪而过，由于系统禁止执行脚本的原因，打开Shell窗口，执行命令 `set-executionpolicy remotesigned`修改策略即可
+
 至此ssh服务安装完成，默认端口是22，若服务器上开启防火墙需要设置对该端口的允许
 
 
