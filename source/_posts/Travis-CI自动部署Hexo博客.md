@@ -83,7 +83,7 @@ deploy:
 
 Travis构建完成后会将生成的文件推送到Github上，这样我们只需要提交博客的源文件，然后Travis帮我们完成构建部署过程，博客发布更新更加方便了。
 
-## 参考文章
+## 参考文章 
 [Travis CI使用经验](https://segmentfault.com/a/1190000016603414?utm_source=tag-newest)
 [用TravisCI持续集成自动部署Hexo博客的个人实践](https://blog.csdn.net/qq_23079443/article/details/79015225)
 
