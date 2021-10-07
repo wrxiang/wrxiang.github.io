@@ -19,7 +19,7 @@ tags: [Travis CI,hexo]
 <img src="https://i.loli.net/2019/06/03/5cf52393ac40687309.png" />
 <img src="https://i.loli.net/2019/06/03/5cf5245446d5725695.png" />
 
-* 进入[Travis CI官网](https://travis-ci.org/)，设置权限
+* 进入[Travis CI官网](https://travis-ci.com/)(自2021年6月15日起，travis-ci.org上的构建停止。请从现在起使用travis-ci.com)，设置权限
 Travis可以使用GitHub账号进行登录，进入设置（Settings），打开需要自动编译的公开仓库
 <img src="https://i.loli.net/2019/06/03/5cf52592ad01949949.png" />
 然后点击右侧的Settings按钮，找到环境变量(Environment Variables)，左侧填一个名字，右侧填写刚刚获取到的Github_Token，`Display value in build log`按钮不要打开，打开后其他人就可以在日志文件中看到你的Github_Token
